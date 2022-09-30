@@ -9,6 +9,12 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --color-titulos: #464646;
+   --color-fondo-azul: #EAF2FD;
+   --color-cajas: #FBFBFB;
+   --azul-botones: #2A7AE4;
+
+
 }
 
 body {
@@ -18,6 +24,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    
+    
 }
 ol, ul,li {
     list-style: none;
@@ -41,70 +49,355 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
+/*Nombre y  icono*/
 section.menu{
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end;
+    height: 10%; /* 10% del viewport */
+    margin: 0px 153px;/*podria ponerlo en el body?*/
 }
+/*cabecera y espacios*/
+header.menu__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-titulos);
+}
+/*items del menu*/
+section.menu nav ul.menu__list{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 750px;
+}
+/*style para email nav*/
+section.menu nav ul.menu__list li:nth-child(6){
+    color: black;
+    font-weight: 800;    
+}
+
 
 /*Sección Title*/
 
 section.title{
-
+    margin: 0 153px;
+    width: 80%;
+    color: var(--color-titulos);
 }
+/*acomoda mi foto y texto al lateral*/
+section.title div.title__div{
+    justify-content: space-around;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*titulo principal*/
+section.title div.title__container h2{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 61px;
+}
+/*imagen de perfil*/
+section.title img.title__profile{
+    width: 250px;/*ver si conviene usarlo*/
+}
+/*imagen redondeada hecho por mi*/
 .title__profile{
-    width: 12%;
-    height: 12%;
-    margin-right: 20px;
+    /* width: 30%;
+    height: 30%; */
     background-repeat: no-repeat;
     background-position: 50%;
     border-radius: 50%;
     background-size: 100% auto;
-    vertical-align: middle;
-    text-align: right;
+    /* vertical-align: middle; */
 }
-
-#firma{
-    width: 120px;
-    height: auto;
+section.title div.title__div div.title__container h3{
+    font-size: 17px;
+    line-height: 23px;
+    width: 600px;
+    margin-bottom: 30px;
 }
-.skills__dif{
-    width: 27px;
-    height: auto;
+/*container links redes sociales*/
+section.title div.title__div div.title__container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 500px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;    
 }
 
 /*Sección About*/
 
 section.about{
+    padding: 62px 153px;
+    background-color: var(--color-fondo-azul);
+}
+/*container seccion about*/
+section.about div.about__container{ 
+    width: 700px;     
+}
+section.about h3.about__title{ 
+    font-size: 32px;  
+    color: var(--color-titulos);   
+}
+/*textos seccion about*/
+section.about div.about__container p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+#firma{
+    width: 120px;
+    height: auto;
+}
 
+/*Sección Skills*/
+
+section.skills{
+    margin: 64px 100px;
+}
+/*titulo de la seccion*/
+section.skills h3.skills__title{
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+}
+/*alineacion de iconos*/
+section.skills div.skills__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+/*Cajas Skills*/
+section.skills div.skills__box{
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: var(--color-cajas);
+    margin: 22px 15px 22px 0px;
+    width: 150px;
+    height: 160px;
+}
+section.skills div.skills__box ul{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-titulos);        
+}
+
+.skills__dif{
+    width: 27px;
+    height: auto;
 }
 
 /*Sección Hobbies*/
 
 section.hobbies{
-    
+    margin: 64px 100px;
+}
+/*titulo de la seccion*/
+section.hobbies h3.hobbies__title{
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+}
+/*alineacion de iconos*/
+section.hobbies div.hobbies__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+/*Cajas hobbies*/
+section.hobbies div.hobbies__box{
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: var(--color-cajas);
+    margin: 22px 15px 22px 0px;
+    width: 150px;
+    height: 160px;
+}
+section.hobbies div.hobbies__box ul{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-titulos);        
 }
 
 /* Experiencia Académica*/
 
 section.academic{
+    padding: 64px 0;
+    background-color: var(--color-fondo-azul);    
+}
+/*titulo de la seccion*/
+section.academic h2.academic__title{
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+}
+/*posicion de la seccion*/
+section.academic div.academic__courses{
+    display: flex;
+    justify-content: center;
 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+section.academic div.academic__courses__box{
+    width: 26.6rem;
+    margin: 0 1rem;
+    display: flex; 
+    
+}
+section.academic div.academic__courses__box ul{
+    margin: 32px;
+    padding: 0;
+}
+section.academic div.academic__courses__box ul li{
+    padding: 0;
+    margin: 32px;
+
+    
+}
+div.academic__courses__box ul li.academic__courses__item__img{
+    background-color: white;
+    padding: 8%;    
+    
+    height: 300px;    
+    display: flex;
+    align-items: center;
+    align-self: center;
+    
+}
+div.academic__courses__box ul li.img:nth-child(1){
+    
+}
+div.academic__courses__box ul li.academic__courses__item__img{
+    
 }
 
 /* experiencia*/
 
 section.experience{
-
+    margin: 64px 100px;    
+}
+section.experience h2.experience__section__title{
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+}
+section.experience div.experience__order{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section.experience div.experience__box{
+    width: 26.6rem;
+    margin: 1rem 1rem;
+    
+    padding: 8%; 
+    
+    background-color: var(--color-cajas);
+    
+}
+section.experience img.experience__img{      
+    display: flex; 
+            
+    margin: 22px 15px 22px 0px;
+    width: 100%;
+    
+   /*  height: 300px;     */    
+}
+.experience__info-container{
+    font-size: 16px;
 }
 
 /*Contacto*/
 
 section.formcontato{
+    padding: 64px 100px;
+    background-color: var(--color-fondo-azul); 
+     
+        
+}
+section.formcontato div.formcontato__contacto{
+    display: flex;
+    justify-content: center;
+}
+div.formcontato__text{
+    padding-left: 3rem;
+}
+div.formcontato__text h2.formcontato__title{
+    font-size: 32px;
+}
+div.formcontato__text h3.formcontato__subtext{
+    font-size: 16px;
+}
+form.formcontato__form{
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /*background-color: rebeccapurple;*/
+}
+input, textarea{
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 1rem;
+    padding: 1rem 0;    
+    font-size: 13px;
+    border: none;
+    
+    background-color: var(--color-cajas);
+    text-align:justify;
+    text-indent: 10px;
+}
 
+button{    
+    --offset: 10px;
+	--border-size: 2px;
+	
+	display: block;
+	position: relative;
+	padding: 1.5em 3em;
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color: var(--azul-botones);
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 0;
+	box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+	transition: background .8s ease;
 }
 
 /*footeer*/
 
 section.footer{
-   
+    padding: 64px;
+    font-size: 16px;
+    text-align: center;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
